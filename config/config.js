@@ -1,9 +1,10 @@
-{
+/* eslint-disable prettier/prettier */
+module.exports = {
   "development": {
-    "username": "root",
-    "password": "password123",
-    "database": "exampledb",
-    "host": "localhost",
+    "username": process.env.MYSQL_USER,
+    "password": process.env.MYSQL_KEY,
+    "database": process.env.MYSQL_DBNAME,
+    "host": process.env.MYSQL_HOST,
     "dialect": "mysql"
   },
   "test": {
@@ -18,4 +19,4 @@
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-}
+};
